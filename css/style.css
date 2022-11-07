@@ -7,9 +7,6 @@
 
 body {
     font-family:var(--main-font);
-    color: #757575;
-    font-size: 16px;
-    letter-spacing: 00.03em;
     width: 1600px;
     margin: 0 auto;
 }
@@ -44,7 +41,6 @@ ul {
     display: flex;
     align-items: center;
     border: 1px solid rgba(236, 236, 236, 1);
-    padding: 24.5px 0;
     background-color: #E5E5E5;
 }
 .container {
@@ -61,9 +57,13 @@ ul {
 .address {
     display: flex;
     align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .logo {
     padding-right: 95px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
 }
 
 .navigation-list-mail {
@@ -336,46 +336,57 @@ cursor: pointer;
 }
 
 .portfolio-list {
-    background: #FFFFFF;
-    /* border: 1px solid #EEEEEE; */
-    flex-basis: calc((100%-60px) / 3-0.5px); 
+    flex-basis: calc((100%-60px) / 3-0.5px);
+    background-color: var(--bright);
+    border-bottom: 1px solid #eeeeee;
 }
 
 .portfolio-list-item {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+     padding: 0;
+    margin: 0;
+    padding-bottom: 94px;
 }
 .portfolio {
     background-color: #FFFFFF;
 }
 .prtfolio-item {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 2; 
-        letter-spacing: 0.06em;
-        color: var(--secondary-color);
-        margin: 0;
-        padding-top: 20px;
+    color: var(--bold-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 }
 .portfolio-class-description {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.875;
-        letter-spacing: 0.03em;
-        color: #757575;
-        margin: 0;
-        padding-top: 4px;
-        padding-bottom: 20px;
+    color: #757575;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
 }
 /* ---------- END-PORTFOLIO --------------*/
 
 /* ---------- FOOTER --------------*/
+.address-footer {
+    padding-top: 20px;
+}
 .logo-footer {
-    padding-bottom: 20px;
+    padding-left: 215px;
+}
+.footer-address {
+    padding-bottom: 9px;
+    padding-left: 215px;
+}
+.address-mail-footer {
+    padding-bottom: 9px;
+    padding-left: 215px;
+}
+.address-tel-footer {
+    padding-left: 215px;
 }
 .footer {
     background: #2F303A;
@@ -394,13 +405,11 @@ cursor: pointer;
     text-decoration-line: underline;
 }
 .footer-address-item {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.714;
-letter-spacing: 0.03em;
-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
 }
 .footer-logo-color {
     color:rgba(255, 255, 255, 1);
