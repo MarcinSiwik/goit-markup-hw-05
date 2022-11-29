@@ -37,15 +37,15 @@ ul {
     text-decoration: none;
 }
 /* ---------- HEADER --------------*/
+
+.navigation-list-tel {
+    padding-left: 30px;
+}
 .header  {
     display: flex;
     align-items: center;
     border: 1px solid rgba(236, 236, 236, 1);
     background-color: #E5E5E5;
-}
-.container {
-    display: flex;
-    align-items: center;
 }
 .navigation {
     display: flex;
@@ -59,19 +59,12 @@ ul {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    padding-left: 137px;
 }
 .logo {
     padding-right: 95px;
     padding-top: 24.5px;
     padding-bottom: 24.5px;
-}
-
-.navigation-list-mail {
-    padding-right: 50px;
-}
-
-.header .address {
-    margin-left: auto;
 }
 
 .logo,
@@ -112,16 +105,15 @@ ul {
 .navigation-list-tel {
     color: #757575;
 }
-.navigation-list-mail {
-    padding-left: 325px;
-}
 
 .navigation-list-link:hover,
 .navigation-list-link:focus,
 .navigation-list-mail:hover,
 .navigation-list-mail:focus,
 .navigation-list-tel:hover,
-.navigation-list-tel:focus
+.navigation-list-tel:focus,
+.address-mail:hover,
+.address-mail:focus
  {
     color: var(--main-color);
  }
@@ -129,11 +121,23 @@ ul {
 
 
 /* ---------- MAIN --------------*/
-
+ .lorem-list {
+    width: 270px;
+    height: 120px;
+    padding: 25px 102.34px;
+}
+.lorem-icon {
+    width: 70px;
+    height: 70px;
+}
 .hero-description-text {
     width: 270px;
     text-align: left;
     margin-right: 30px;
+    background-color: #FFFFFF;;
+}
+.lorem-list {
+    background-color: #F5F4FA;
 }
 .hero-description {
     display: flex;
@@ -145,7 +149,13 @@ ul {
     background-color: #FFFFFF;
 }
 .hero {
-    background-color:#2F303A;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+     url(/images/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
 }
 .hero-item {
     display: flex;
@@ -182,7 +192,6 @@ ul {
 }
 
 .hero-item {
-    background-color:#2F303A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,7 +314,7 @@ cursor: pointer;
     letter-spacing: 0.03em;
     color: #757575;
     margin: 0 auto;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .team-img-list-img {
     padding-bottom: 30px;
@@ -320,8 +329,80 @@ cursor: pointer;
     margin: 0 auto;
     padding-bottom: 10px;
 }
-
+.social-list {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 30px;
+    padding-left: 32px;
+}
+.social-links-item {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12px;
+    }
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+.social-links-item:hover,
+.social-links-item:focus {
+    fill: #FFFFFF;
+    background-color:var(--main-color);
+}
+.social-list:not(:last-child) {
+    padding-right: 10px;
+}
 /* ---------- END-TEAM --------------*/
+
+/* ---------- CUSTOMERS --------------*/
+.customers .container {
+    display: block;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.customers-name {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.167;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--secondary-color);
+        text-align: center;
+}
+.customers-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customers-links-item {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.customers-icon {
+    width: 106px;
+    height: 60px;
+}
+.customers-list:not(:last-child) {
+    margin-right: 30px;
+}
+.customers-links-item:hover,
+.customers-links-item:focus {
+    fill: var(--main-color);
+    border: 1px solid rgba(33, 150, 243, 1);
+    /* background-color: var(--main-color); */
+}
+
+/* ---------- END-CUSTOMERS --------------*/
 
 
 /* ---------- PORTFOLIO --------------*/
@@ -340,7 +421,11 @@ cursor: pointer;
     background-color: var(--bright);
     border-bottom: 1px solid #eeeeee;
 }
-
+.portfolio-list:hover,
+.portfolio-list:focus
+{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 .portfolio-list-item {
     list-style-type: none;
     display: flex;
@@ -371,35 +456,68 @@ cursor: pointer;
 /* ---------- END-PORTFOLIO --------------*/
 
 /* ---------- FOOTER --------------*/
+footer {
+    background-color: #2f303a;
+    padding: 60px 0;
+}
+.all-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.logo-address-footer {
+    margin-left: 15px;
+}
+.social-icon-footer {
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+}
+.social-links-footer:hover,
+.social-links-footer:focus {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.social-links-footer {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 12px;
+}
+.social-list-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+}
+.right-side-footer {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 0;
+        margin-bottom: 20px;
+}
 .address-footer {
     padding-top: 20px;
 }
-.logo-footer {
-    padding-left: 215px;
-}
 .footer-address {
     padding-bottom: 9px;
-    padding-left: 215px;
 }
 .address-mail-footer {
     padding-bottom: 9px;
-    padding-left: 215px;
 }
-.address-tel-footer {
-    padding-left: 215px;
-}
-.footer {
-    background: #2F303A;
-}
+
 .footer-mail,
 .footer-tel {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
-    text-decoration: none;
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6)
 }
 .footer-mail {
     text-decoration-line: underline;
@@ -414,14 +532,4 @@ cursor: pointer;
 .footer-logo-color {
     color:rgba(255, 255, 255, 1);
 }
-.section-wrapper {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    
-}
 /* ---------- END-FOOTER --------------*/
-
-
-
-
-
