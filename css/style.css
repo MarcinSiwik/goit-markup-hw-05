@@ -38,9 +38,7 @@ ul {
 }
 /* ---------- HEADER --------------*/
 
-.navigation-list-tel {
-    padding-left: 30px;
-}
+
 .header  {
     display: flex;
     align-items: center;
@@ -59,10 +57,9 @@ ul {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 137px;
 }
 .logo {
-    padding-right: 95px;
+    padding-right: 93px;
     padding-top: 24.5px;
     padding-bottom: 24.5px;
 }
@@ -88,32 +85,42 @@ ul {
 }
 
 
-.navigation-list-link,
-.navigation-list-mail,
-.navigation-list-tel
+.navigation-list-link {
+    color: var(--secondary-color);
+    font-weight: 500;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.02em;
+}
+.kontakt:hover,
+.kontakt:focus-within {
+    color: var(--main-color)
+}
+
+.kontakt:hover .kontakt-icon,
+.kontakt:focus-within .kontakt-icon {
+    fill: var(--main-color);
+}
+
+.kontakt
  {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.143;
     letter-spacing: 0.02em;
-    color: var(--secondary-color);
+    color: #757575;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 30px;
+    
 }
 .navigation-list-link:last-child {
     padding-right: 46px;
 }
-.navigation-list-mail,
-.navigation-list-tel {
-    color: #757575;
-}
 
 .navigation-list-link:hover,
-.navigation-list-link:focus,
-.navigation-list-mail:hover,
-.navigation-list-mail:focus,
-.navigation-list-tel:hover,
-.navigation-list-tel:focus,
-.address-mail:hover,
-.address-mail:focus
+.navigation-list-link:focus
  {
     color: var(--main-color);
  }
@@ -460,13 +467,12 @@ footer {
     background-color: #2f303a;
     padding: 60px 0;
 }
-.all-footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px;
-}
+
 .logo-address-footer {
     margin-left: 15px;
+    display: flex;
+    /* display: inline-flex; */
+    /* justify-content: space-between; */
 }
 .social-icon-footer {
     width: 20px;
@@ -489,7 +495,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 0;
+    padding-top: 20px;
 }
 .right-side-footer {
         font-weight: 700;
@@ -498,14 +504,18 @@ footer {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #FFFFFF;
-        margin-top: 0;
-        margin-bottom: 20px;
+        padding-top: 12px;
+        
+       
 }
 .address-footer {
     padding-top: 20px;
+    padding-right: 70px;
+   
 }
 .footer-address {
     padding-bottom: 9px;
+    padding-top: 20px;
 }
 .address-mail-footer {
     padding-bottom: 9px;
