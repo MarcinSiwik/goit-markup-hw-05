@@ -37,8 +37,24 @@ ul {
     text-decoration: none;
 }
 /* ---------- HEADER --------------*/
-
-
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    /* transform: translateX(-50%) translateY(-50%) translateZ(-50%) scale(0) rotate(0deg) skew(40deg, 40deg) ; */
+}
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 50%;
+    cursor: pointer;
+    color: green;
+}
 .header  {
     display: flex;
     align-items: center;
@@ -93,13 +109,11 @@ ul {
         letter-spacing: 0.02em;
 }
 .kontakt:hover,
-.kontakt:focus-within {
-    color: var(--main-color)
-}
-
-.kontakt:hover .kontakt-icon,
-.kontakt:focus-within .kontakt-icon {
+.kontakt-icon,
+.kontakt:focus-within,
+.kontakt-icon {
     fill: var(--main-color);
+    color: var(--main-color);
 }
 
 .kontakt
@@ -279,6 +293,20 @@ cursor: pointer;
 .about {
  padding-bottom: 94px;
  background-color: #FFFFFF;
+}
+.overlays {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: rgba(47, 48, 58, 0.8);;
+        width: 370px;
+        height: 70px;
+        margin: 0;
+        position: absolute;
 }
 .secondary-undertitle {
     font-weight: 700;
